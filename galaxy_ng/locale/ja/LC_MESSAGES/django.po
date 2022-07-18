@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-25 02:43+0000\n"
+"POT-Creation-Date: 2022-07-18 10:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,24 +66,24 @@ msgstr "コンテナー名には、英数字、「.」、「_」、「-」、お
 msgid "Name cannot be changed."
 msgstr "名前を変更できません。"
 
-#: app/api/ui/serializers/synclist.py:41
+#: app/api/ui/serializers/synclist.py:38
 #, python-brace-format
 msgid "Repository \"{pulp_id}\" not found while creating synclist"
 msgstr "同期リストの作成中にリポジトリー \"{pulp_id}\" が見つかりませんでした"
 
-#: app/api/ui/serializers/synclist.py:96
+#: app/api/ui/serializers/synclist.py:77
 #, python-format
 msgid "Synclist already exists: %s"
 msgstr "同期リストはすでに存在します: %s"
 
-#: app/api/ui/serializers/synclist.py:104
+#: app/api/ui/serializers/synclist.py:85
 #, python-brace-format
 msgid ""
 "Collection \"{namespace}.{name}\" not found while creating synclist "
 "{synclist}"
 msgstr "同期リスト {synclist} の作成中にコレクション \"{namespace}.{name}\" が見つかりませんでした"
 
-#: app/api/ui/serializers/synclist.py:143
+#: app/api/ui/serializers/synclist.py:124
 #, python-brace-format
 msgid ""
 "Collection \"{namespace}.{name}\" not found while updating synclist "
@@ -104,6 +104,24 @@ msgstr "スーパーユーザーパーミッションを付与するには、ス
 #, python-format
 msgid "Group name=%(name)s, id=%(id)s does not exist"
 msgstr "グループ名=%(name)s、id=%(id)s は存在しません"
+
+#: app/api/ui/views/feature_flags.py:50
+msgid ""
+"WARNING:GALAXY_COLLECTION_SIGNING_SERVICE is set to '{}', however the "
+"respective SigningService does not exist in the database."
+msgstr "警告：GALAXY_COLLECTION_SIGNING_SERVICE は '{}' に設定されていますが、それぞれの SigningService がデータベースに存在しません。"
+
+#: app/api/ui/views/feature_flags.py:65
+msgid ""
+"WARNING:GALAXY_AUTO_SIGN_COLLECTIONS is set to True, however the system is "
+"not configured with a SigningService to create signatures."
+msgstr "WARNING:GALAXY_AUTO_SIGN_COLLECTIONS は True に設定されていますが、システムは署名を作成するために SigningService で設定されていません。"
+
+#: app/api/ui/views/feature_flags.py:76
+msgid ""
+"INFO:System is configured to display signatures (coming from remote syncs) "
+"but is not configured to create or accept upload of signatures."
+msgstr "INFO:System is configured to display signature(coming from remote syncs)but is not configured to create or accept upload of signature."
 
 #: app/api/ui/views/index_execution_environments.py:36
 msgid "Indexing execution environments is not supported on this registry."
@@ -284,6 +302,13 @@ msgstr "宛先リポジトリーでコレクション %s がすでに見つか�
 msgid "Signing %s service not found"
 msgstr "署名 %s サービスが見つかりません"
 
+#: app/api/v3/viewsets/collection.py:299
+#, python-brace-format
+msgid ""
+"Collection {namespace}.{name} could not be approved because system requires "
+"at least a signature for approval."
+msgstr "承認するには少なくとも署名が必要なため、コレクション {namespace}.{name} を承認できませんでした。"
+
 #: app/api/v3/viewsets/namespace.py:67
 #, python-format
 msgid "A namespace named %s already exists."
@@ -352,3 +377,4 @@ msgstr "アップストリームリポジトリー \"%s\" からリポジトリ�
 #: app/tasks/synclist.py:163
 msgid "Unexpected synclist policy {}"
 msgstr "予期せぬ同期リストポリシー {}"
+
