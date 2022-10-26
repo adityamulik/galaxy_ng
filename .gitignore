@@ -108,3 +108,7 @@ venv.bak/
 
 # Galaxy NG
 db_snapshots/
+
+# Translation Script
+pre_translation.sh
+post_translation.sh
